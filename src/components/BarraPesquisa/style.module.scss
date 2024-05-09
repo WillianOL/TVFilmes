@@ -1,0 +1,12 @@
+.barraPesquisaHeader {
+  display: flex;
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  background-color: red;
+  left: 0px;
+  input {
+    padding: 6px;
+    width: 100%;
+  }
+}

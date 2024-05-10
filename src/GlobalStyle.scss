@@ -22,15 +22,19 @@
   color: var(--corTexto);
 }
 
-main, header, footer {
+header, footer, section {
   padding: 0px 90px;
 }
 
-a {
+a, p {
   text-decoration: none;
   color: var(--corTexto);
 }
 
 ul {
   list-style: none;
+}
+
+img {
+  width: 100%;
 }

@@ -7,7 +7,7 @@
   width: 100%;
   left: 0px;
   z-index: 1;
-  animation: barraPesquisaHeader .5s ease;
+  animation: barraPesquisaHeader 0.5s ease;
   input {
     padding: 6px;
     width: 79%;
@@ -17,6 +17,9 @@
     &:focus {
       outline: 1px solid var(--corPrincipal);
     }
+    &::placeholder {
+      color: rgb(129, 129, 129);
+    }
   }
   button {
     padding: 5px 50px;
@@ -24,7 +27,7 @@
     border: 1px solid var(--corPrincipal);
     font-size: 1.2rem;
     border-radius: 0px var(--borderRadius2) var(--borderRadius2) 0px;
-    transition: all .1s ease;
+    transition: all 0.1s ease;
     cursor: pointer;
     path {
       color: var(--branco);
@@ -41,5 +44,46 @@
 @keyframes barraPesquisaHeader {
   from {
     bottom: 10px;
+  }
+}
+
+.barraPesquisa {
+  display: flex;
+  width: 100%;
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    max-width: 600px;
+    border: 1px solid var(--bordaElementos);
+    border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+    outline: none;
+    &:focus {
+      outline: 1px solid var(--corPrincipal);
+    }
+    &::placeholder {
+      color: rgb(129, 129, 129);
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    padding: 10px 25px;
+    background-color: var(--corPrincipal);
+    border: 1px solid var(--corPrincipal);
+    border-radius: 0 var(--borderRadius) var(--borderRadius) 0;
+    transition: all .1s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--elementosDeFundo);
+      path {
+        color: var(--corPrincipal);
+      }
+    }
+    path {
+      color: var(--branco);
+    }
   }
 }

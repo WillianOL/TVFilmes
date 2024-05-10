@@ -9,9 +9,9 @@ const BarraPesquisa = ({ tipoHeader }) => {
   return (
     <div
       className={tipoHeader ? style.barraPesquisaHeader : style.barraPesquisa}
-      style={{display: barraPesquisa ? 'flex' : 'none'}}
+      style={tipoHeader && {display: barraPesquisa ? 'flex' : 'none'}}
     >
-      <input type="text" />
+      <input type="text" placeholder='Filmes, Series, Atores...'/>
       <button>
         <IoSearch />
       </button>

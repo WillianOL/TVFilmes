@@ -8,12 +8,14 @@ import BarraPesquisa from '../BarraPesquisa/BarraPesquisa';
 const Header = () => {
   return (
     <header className={style.header}>
-      <NavLink to="/" className={style.marca}>
-        <p>TV<span>Filmes</span></p>
-        <PiFilmSlateFill />
-      </NavLink>
-      <Navegacao />
-      <BarraPesquisa tipoHeader={true}/>
+      <div>
+        <NavLink to="/" className={style.marca}>
+          <p>TV<span>Filmes</span></p>
+          <PiFilmSlateFill />
+        </NavLink>
+        <Navegacao />
+        <BarraPesquisa tipoHeader={true}/>
+      </div>
     </header>
   );
 };

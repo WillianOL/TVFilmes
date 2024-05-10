@@ -6,10 +6,17 @@ import { Link } from 'react-router-dom';
 
 const Favoritos = () => {
   const [active, setActive] = React.useState(false);
-  const { numFavoritos } = React.useContext(UserContext);
+  const {
+    numFavoritos,
+    setBarraPesquisa,
+    barraPesquisa,
+    modalFavoritos,
+    setModalFavoritos,
+  } = React.useContext(UserContext);
 
   function toggleMenu() {
-    setActive(!active)
+    setModalFavoritos(!modalFavoritos);
+    if (barraPesquisa) setBarraPesquisa(!barraPesquisa);
   }
 
   return (
@@ -21,13 +28,15 @@ const Favoritos = () => {
         )}
       </div>
       <div
-        style={{ display: active ? 'flex' : 'none' }}
+        style={{ display: modalFavoritos ? 'flex' : 'none' }}
         className={style.conteinerFavoritos}
       >
         <div className={style.favoritos}>
           {numFavoritos === 0 && <p>Adicione filmes aos seus favoritos!</p>}
         </div>
-        <Link to="/todosOsFavoritos" onClick={toggleMenu}>Todos os favoritos</Link>
+        <Link to="/todosOsFavoritos" onClick={toggleMenu}>
+          Todos os favoritos
+        </Link>
       </div>
     </div>
   );

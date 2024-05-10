@@ -6,7 +6,12 @@ import { UserContext } from '../../../GlobalContext';
 import style from './style.module.scss';
 
 const Navegacao = () => {
-  const { barraPesquisa, setBarraPesquisa } = React.useContext(UserContext);
+  const { barraPesquisa, setBarraPesquisa, modalFavoritos, setModalFavoritos } = React.useContext(UserContext);
+
+  function handleClick() {
+    setBarraPesquisa(!barraPesquisa)
+    if(modalFavoritos) setModalFavoritos(!modalFavoritos)
+  }
 
   return (
     <nav className={style.navegacao}>
@@ -19,7 +24,7 @@ const Navegacao = () => {
         </li>
       </ul>
       <Favoritos />
-      <button onClick={() => setBarraPesquisa(!barraPesquisa)}>Procurar</button>
+      <button onClick={handleClick}>Procurar</button>
     </nav>
   );
 };

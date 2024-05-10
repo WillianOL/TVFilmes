@@ -1,12 +1,45 @@
 .barraPesquisaHeader {
   display: flex;
+  justify-content: center;
   position: absolute;
-  bottom: -40px;
+  bottom: -44px;
   width: 100%;
-  background-color: red;
+  width: 100%;
   left: 0px;
+  z-index: 1;
+  animation: barraPesquisaHeader .5s ease;
   input {
     padding: 6px;
-    width: 100%;
+    width: 79%;
+    border-radius: var(--borderRadius2) 0px 0px var(--borderRadius2);
+    border: 1px solid var(--bordaElementos);
+    outline: none;
+    &:focus {
+      outline: 1px solid var(--corPrincipal);
+    }
+  }
+  button {
+    padding: 5px 50px;
+    background-color: var(--corPrincipal);
+    border: 1px solid var(--corPrincipal);
+    font-size: 1.2rem;
+    border-radius: 0px var(--borderRadius2) var(--borderRadius2) 0px;
+    transition: all .1s ease;
+    cursor: pointer;
+    path {
+      color: var(--branco);
+    }
+    &:hover {
+      background-color: var(--elementosDeFundo);
+      path {
+        color: var(--corPrincipal);
+      }
+    }
+  }
+}
+
+@keyframes barraPesquisaHeader {
+  from {
+    bottom: 10px;
   }
 }

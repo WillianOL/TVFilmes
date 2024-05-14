@@ -1,0 +1,33 @@
+.itemConteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px 15px;
+  background-color: var(--fundoFilmes);
+  border: 1px solid var(--bordaElementos);
+  border-radius: var(--borderRadius);
+  width: 180px;
+  color: var(--corTexto);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+  transition: all .1s ease;
+  &:hover {
+    background-color: var(--elementosDeFundo);
+    transform: scale(1.01);
+  }
+  .itemImagem {
+    width: 180px;
+    max-width: 250px;
+    border-radius: var(--borderRadius);
+  }
+  .itemTitulo {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .itemData {
+    font-size: .8rem;
+    color: rgb(99, 99, 99);
+    justify-self: baseline;
+  }
+}

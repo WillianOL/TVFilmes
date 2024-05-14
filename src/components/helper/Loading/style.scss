@@ -1,0 +1,19 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  svg {
+    animation: animaLoading 1.5s ease infinite;
+  }
+  path {
+    color: var(--corPrincipal);
+  }
+
+  @keyframes animaLoading {
+    from {
+      transform: rotate(360deg);
+    }
+  }
+}
+

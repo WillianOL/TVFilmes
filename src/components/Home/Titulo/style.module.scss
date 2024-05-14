@@ -1,0 +1,15 @@
+.titulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--corTexto);
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--corPrincipal);
+    bottom: -5px;
+  }
+}

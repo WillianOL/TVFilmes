@@ -4,11 +4,12 @@ import { GET_POPULARES } from '../../../api/api';
 import useFetch from '../../../hooks/useFetch';
 import style from './style.module.scss';
 import CarrosselDeItens from '../CarrosselDeItens/CarrosselDeItens';
+import Seletores from '../Seletores/Seletores';
+import Seletor from '../Seletores/Seletor';
 
 const Populares = () => {
   const [plataforma, setPlataforma] = React.useState('tv');
   const { loading, dados, requisicao } = useFetch();
-
 
   React.useEffect(() => {
     const { url, options } = GET_POPULARES(plataforma);
@@ -19,23 +20,24 @@ const Populares = () => {
     <section className={style.popularesConteiner}>
       <nav className={style.tituloESeletores}>
         <Titulo>Populares</Titulo>
-        <ul className={style.seletores}>
-          <li
+        <Seletores>
+          <Seletor
             onClick={() => setPlataforma('tv')}
-            className={plataforma === 'tv' ? style.selecionado : ''}
+            className={plataforma === 'tv' ? 'selecionado' : ''}
           >
             Series
-          </li>
-          <li
+          </Seletor>
+          <Seletor
             onClick={() => setPlataforma('movie')}
-            className={plataforma === 'movie' ? style.selecionado : ''}
+            className={plataforma === 'movie' ? 'selecionado' : ''}
           >
             Filmes
-          </li>
-        </ul>
+          </Seletor>
+        </Seletores>
       </nav>
-      
-      {dados && !loading && <CarrosselDeItens dados={dados} loading={loading}/>} 
+      {dados && (
+        <CarrosselDeItens dados={dados} loading={loading} />
+      )}
     </section>
   );
 };

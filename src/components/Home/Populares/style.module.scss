@@ -1,5 +1,12 @@
 .popularesConteiner {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../../../imgs/secoes/fita_de_filme.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   .tituloESeletores {
     display: flex;
     align-items: center;

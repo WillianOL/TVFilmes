@@ -34,7 +34,8 @@ const Populares = () => {
           </li>
         </ul>
       </nav>
-      {dados && <CarrosselDeItens dados={dados} loading={loading}/>} 
+      
+      {dados && !loading && <CarrosselDeItens dados={dados} loading={loading}/>} 
     </section>
   );
 };

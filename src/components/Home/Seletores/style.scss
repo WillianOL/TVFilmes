@@ -1,0 +1,17 @@
+.seletores {
+  display: flex;
+  gap: 10px;
+  li {
+    font-size: 1rem;
+    padding: 5px 10px;
+    background-color: var(--branco);
+    border: 1px solid var(--bordaElementos);
+    border-radius: var(--borderRadius);
+    cursor: pointer;
+    &.selecionado {
+      background-color: var(--corPrincipal);
+      border-color: var(--corPrincipal);
+      color: var(--branco);
+    }
+  }
+}

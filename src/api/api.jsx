@@ -13,3 +13,16 @@ export function GET_POPULARES(plataforma) {
     },
   };
 }
+
+export function GET_TRENDING(intervalo) {
+  return {
+    url: `${API_URL}/trending/all/${intervalo}?language=pt-BR&page=1`,
+    options: {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: AUTHORIZATION,
+      },
+    },
+  };
+}

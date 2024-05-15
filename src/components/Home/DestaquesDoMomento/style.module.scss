@@ -1,0 +1,10 @@
+.destaqueConteiner {
+  background-image: url('../../../imgs/secoes/linha_destaques.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  .destaqueSeletores {
+    display: flex;
+    gap: 15px;
+  }
+}

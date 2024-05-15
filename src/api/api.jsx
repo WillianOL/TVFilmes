@@ -26,3 +26,16 @@ export function GET_TRENDING(intervalo) {
     },
   };
 }
+
+export function GET_ATORES_POPULARES() {
+  return {
+    url: `${API_URL}/person/popular?language=pt-BR&page=1`,
+    options: {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: AUTHORIZATION,
+      },
+    },
+  };
+}

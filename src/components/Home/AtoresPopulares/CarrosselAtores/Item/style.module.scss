@@ -1,0 +1,42 @@
+.itemConteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: baseline;
+  overflow: hidden;
+  border-radius: var(--borderRadius);
+  background-color: var(--fundoFilmes);
+  border: 1px solid var(--bordaElementos);
+  min-width: 180px;
+  gap: 10px;
+  .itemNome {
+    text-align: center;
+    font-weight: 500;
+    color: var(--corTexto);
+  }
+  .itemImagem {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+  }
+  .itemFilme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: last baseline;
+    width: 100%;
+    background-image: url("../../../../../imgs/secoes/detalhe_atores.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    text-align: center;
+    p {
+      margin-bottom: 10px;
+      color: var(--branco);
+      font-weight: 300;
+      font-size: .95rem;
+    }
+  }
+}

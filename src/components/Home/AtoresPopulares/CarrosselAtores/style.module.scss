@@ -1,0 +1,25 @@
+.conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  gap: 25px;
+  width: 100%;
+  position: relative;
+  .carrosselAtores {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 10px;
+    gap: 25px;
+    width: 100%;
+    &::-webkit-scrollbar {
+      border-radius: 10px;
+      height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--elementosDeFundo);
+      border-radius: 10px;
+    }
+  }
+}

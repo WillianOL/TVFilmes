@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  padding: 10px 15px;
+  padding: 20px;
   background-color: var(--fundoFilmes);
   border: 1px solid var(--bordaElementos);
   border-radius: var(--borderRadius);
@@ -21,7 +21,7 @@
     border-radius: var(--borderRadius);
   }
   .itemTitulo {
-    font-size: 1rem;
+    font-size: .95rem;
     font-weight: 500;
     text-align: center;
   }
@@ -29,5 +29,6 @@
     font-size: .8rem;
     color: rgb(99, 99, 99);
     justify-self: baseline;
+    margin-top: 10px;
   }
 }

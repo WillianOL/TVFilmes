@@ -1,0 +1,20 @@
+.generoConteiner {
+  .generos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    .generoItem {
+      cursor: pointer;
+      font-weight: 300;
+      font-size: .95rem;
+      padding: 2px 5px;
+      border: 1px solid var(--bordaElementos);
+      border-radius: var(--borderRadius);
+      transition: all .2s ease;
+    }
+    .selecionado {
+      background-color: var(--corPrincipal);
+      color: var(--branco);
+    }
+  }
+}

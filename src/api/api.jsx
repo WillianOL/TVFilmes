@@ -39,3 +39,16 @@ export function GET_ATORES_POPULARES() {
     },
   };
 }
+
+export function GET_GENERO() {
+  return {
+    url: `${API_URL}/genre/movie/list?language=pt-BR`,
+    options: {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: AUTHORIZATION,
+      },
+    },
+  };
+}

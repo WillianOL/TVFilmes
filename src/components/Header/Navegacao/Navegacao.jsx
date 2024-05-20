@@ -17,10 +17,10 @@ const Navegacao = () => {
     <nav className={style.navegacao}>
       <ul className={style.links}>
         <li>
-          <NavLink to="/filmesPopulares">Filmes</NavLink>
+          <NavLink to="/filmes">Filmes</NavLink>
         </li>
         <li>
-          <NavLink to="/seriesPopulares">Séries</NavLink>
+          <NavLink to="/series">Séries</NavLink>
         </li>
       </ul>
       <Favoritos />

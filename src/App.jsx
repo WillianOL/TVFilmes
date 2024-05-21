@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import { GlobalContext } from './GlobalContext';
 import FilmesPage from './components/FilmesPage/FilmesPage';
 import SeriesPage from './components/SeriesPage/SeriesPage';
+import ResultadoPesquisa from './components/ResultadoPesquisa/ResultadoPesquisa';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="filmes" element={<FilmesPage />} />
             <Route path="series" element={<SeriesPage />} />
+            <Route path='resultadoPesquisa' element={<ResultadoPesquisa />}/>
           </Routes>
         </GlobalContext>
       </BrowserRouter>

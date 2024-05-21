@@ -11,7 +11,7 @@ const CarrosselAtores = ({ dados, loading }) => {
       <ul className={style.carrosselAtores}>
         {loading && <Loading />}
         {atoresMaximo.map((ator) => (
-          <Item ator={ator} />
+          <Item key={ator.id} ator={ator} />
         ))}
       </ul>
     </div>

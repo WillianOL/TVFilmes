@@ -52,3 +52,18 @@ export function GET_GENERO() {
     },
   };
 }
+
+export function GET_RESULTADO_PESQUISA(valor) {
+  return {
+    url: `${API_URL}search/multi?query=${valor}&include_adult=false&language=en-US&page=1`,
+    options: {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: AUTHORIZATION,
+      },
+    },
+  };
+}
+
+// 

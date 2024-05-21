@@ -1,10 +1,10 @@
 import React from 'react';
-import { IoSearch } from 'react-icons/io5';
 import style from './style.module.scss';
-import { UserContext } from '../../GlobalContext';
+import { IoSearch } from 'react-icons/io5';
+import { UserContext } from '../../../GlobalContext';
 
-const BarraPesquisa = () => {
-  const { pesquisar, setErrorPesquisa, errorPesquisa } =
+const BarraPesquisaHeader = () => {
+  const { activeBarraPesquisa, pesquisar, errorPesquisa, setErrorPesquisa } =
     React.useContext(UserContext);
   const [value, setValue] = React.useState('');
 
@@ -14,7 +14,10 @@ const BarraPesquisa = () => {
   }
 
   return (
-    <div className={style.barraPesquisa}>
+    <div
+      className={style.barraPesquisaHeader}
+      style={{ display: activeBarraPesquisa ? 'flex' : 'none' }}
+    >
       <input
         type="text"
         value={value}
@@ -29,4 +32,4 @@ const BarraPesquisa = () => {
   );
 };
 
-export default BarraPesquisa;
+export default BarraPesquisaHeader;

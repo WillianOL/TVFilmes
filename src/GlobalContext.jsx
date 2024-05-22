@@ -7,6 +7,8 @@ export const GlobalContext = ({ children }) => {
   const [activeBarraPesquisa, setActiveBarraPesquisa] = React.useState(false);
   const [modalFavoritos, setModalFavoritos] = React.useState(false);
   const [errorPesquisa, setErrorPesquisa] = React.useState(null);
+  const [valorPesquisa, setValorPesquisa] = React.useState('')
+  const [resultadoPesquisa, setResultadoPesquisa] = React.useState(null)
 
   const [numFavoritos, setNumFavoritos] = React.useState(() => {
     return localStorage.getItem('filmesFavoritos') || 0;
@@ -18,6 +20,7 @@ export const GlobalContext = ({ children }) => {
       setErrorPesquisa('Digite algo para realizar a pesquisa');
     } else {
       navigate('/resultadoPesquisa')
+      setValorPesquisa(valorPesquisa)
       setErrorPesquisa(null)
     }
   }
@@ -33,7 +36,10 @@ export const GlobalContext = ({ children }) => {
         setModalFavoritos,
         pesquisar,
         errorPesquisa,
-        setErrorPesquisa
+        setErrorPesquisa,
+        valorPesquisa,
+        resultadoPesquisa,
+        setResultadoPesquisa
       }}
     >
       {children}

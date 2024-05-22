@@ -16,9 +16,9 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="filmes" element={<FilmesPage />} />
-            <Route path="series" element={<SeriesPage />} />
-            <Route path='resultadoPesquisa' element={<ResultadoPesquisa />}/>
+            <Route path="/filmes" element={<FilmesPage />} />
+            <Route path="/series" element={<SeriesPage />} />
+            <Route path='/resultadoPesquisa' element={<ResultadoPesquisa />}/>
           </Routes>
         </GlobalContext>
       </BrowserRouter>

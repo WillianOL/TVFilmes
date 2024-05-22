@@ -1,0 +1,37 @@
+.categoriaConteiner {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border: 1px solid var(--bordaElementos);
+  height: fit-content;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.068);
+  .categoriaTitulo {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0px;
+    background-color: var(--corPrincipal);
+    color: var(--branco);
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  .categorias {
+    display: flex;
+    flex-direction: column;
+    label {
+      width: 100%;
+      position: relative;
+      padding: 15px;
+      font-size: 1.1rem;
+      transition: all .1s ease;
+      cursor: pointer;
+      input {
+        display: none;
+      }
+      &:hover {
+        background-color: var(--elementosDeFundo);
+      }
+    }
+  }
+}

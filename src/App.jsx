@@ -6,7 +6,8 @@ import Home from './components/Home/Home';
 import { GlobalContext } from './GlobalContext';
 import FilmesPage from './components/FilmesPage/FilmesPage';
 import SeriesPage from './components/SeriesPage/SeriesPage';
-import ResultadoPesquisa from './components/ResultadoPesquisa/ResultadoPesquisa';
+import PesquisaPorNome from './components/PesquisaPorNome/PesquisaPorNome'
+
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/filmes" element={<FilmesPage />} />
             <Route path="/series" element={<SeriesPage />} />
-            <Route path='/resultadoPesquisa' element={<ResultadoPesquisa />}/>
+            <Route path='/resultadoPesquisa' element={<PesquisaPorNome />}/>
           </Routes>
         </GlobalContext>
       </BrowserRouter>

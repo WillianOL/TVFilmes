@@ -5,7 +5,6 @@ import { UserContext } from '../../../GlobalContext';
 
 const ResultadosPesquisa = ({loading, error }) => {
   const {resultadoPesquisa} = React.useContext(UserContext)
-  console.log(resultadoPesquisa);
 
   return (
     <div className={style.conteiner}>

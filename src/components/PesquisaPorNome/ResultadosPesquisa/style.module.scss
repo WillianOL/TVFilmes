@@ -1,4 +1,7 @@
 .conteiner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   ul {
     display: flex;
     flex-direction: column;

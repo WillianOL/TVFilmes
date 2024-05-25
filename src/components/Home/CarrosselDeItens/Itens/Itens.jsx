@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Itens = ({ dado }) => {
   return (
-    <Link to="detalhes" className={style.itemConteiner} id={dado.id}>
+    <Link to={`/${dado && dado.media_type}/${dado.id}`} className={style.itemConteiner}>
       <div>
         <img
           src={`https://image.tmdb.org/t/p/w500/${dado.poster_path}`}

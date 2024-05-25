@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Item = ({ ator }) => {
   return (
-    <Link to="detalhes" className={style.itemConteiner} id={ator.id}>
+    <Link to={`detalhes/${ator.id}`} className={style.itemConteiner}>
       <div
         className={style.itemImagem}
         style={{

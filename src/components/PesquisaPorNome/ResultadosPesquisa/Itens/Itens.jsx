@@ -5,7 +5,7 @@ import style from './style.module.scss';
 const Itens = ({ dado }) => {
   return (
     <div id={dado.id} className={style.itemConteiner}>
-      <Link to={`detalhes/${dado.id}`} className={style.conteinerImg}>
+      <Link to={`/${dado.media_type}/${dado.id}`} className={style.conteinerImg}>
         <img
           src={`https://image.tmdb.org/t/p/w500/${dado.poster_path || dado.profile_path}`}
           alt="poster do filme"

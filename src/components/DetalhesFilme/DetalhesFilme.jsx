@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import { GET_DETALHES_FILME } from '../../api/api'
 import BannerFilme from './BannerFilme/BannerFilme'
+import AtoresDoFilme from './AtoresDoFilme/AtoresDoFilme'
 
 const DetalhesFilme = () => {
   const {id} = useParams()
@@ -16,8 +17,9 @@ const DetalhesFilme = () => {
   if(error) return <p>Ocorreu um error inesperado, volte ao inicio</p>
   if(dados)
   return (
-    <main>
-      <BannerFilme dados={dados} />
+    <main style={{gap: '30px'}}>
+      <BannerFilme dados={dados} loading={loading} />
+      <AtoresDoFilme dados={dados.credits.cast} loading={loading} />
     </main>
   )
 }

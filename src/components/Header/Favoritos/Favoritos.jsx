@@ -5,7 +5,6 @@ import { UserContext } from '../../../GlobalContext';
 import { Link } from 'react-router-dom';
 
 const Favoritos = () => {
-  const [active, setActive] = React.useState(false);
   const {
     numFavoritos,
     setBarraPesquisa,

@@ -68,7 +68,7 @@ export function GET_RESULTADO_PESQUISA(valor) {
 
 export function GET_DETALHES_FILME(id) {
   return {
-    url: `${API_URL}/movie/${id}?append_to_response=credits&language=pt-BR`,
+    url: `${API_URL}/movie/${id}?append_to_response=credits,recommendations&language=pt-BR`,
     options: {
       method: 'GET',
       headers: {

@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
   padding: 15px 20px;
   max-width: 220px;
   background-color: var(--fundoFilmes);
@@ -30,5 +31,19 @@
     color: rgb(99, 99, 99);
     justify-self: baseline;
     margin-top: 10px;
+  }
+  .itemNota {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    border: 3px solid var(--fundoFilmes);
+    position: absolute;
+    min-width: 33px;
+    font-weight: 500;
+    min-height: 33px;
+    right: 15px;
+    top: 10px;
   }
 }

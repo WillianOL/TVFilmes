@@ -8,6 +8,7 @@ import FilmesPage from './components/FilmesPage/FilmesPage';
 import SeriesPage from './components/SeriesPage/SeriesPage';
 import PesquisaPorNome from './components/PesquisaPorNome/PesquisaPorNome'
 import DetalhesFilme from './components/DetalhesFilme/DetalhesFilme';
+import TodosDoElenco from './components/DetalhesFilme/TodosDoElenco/TodosDoElenco';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
             <Route path="/filmes" element={<FilmesPage />} />
             <Route path="/series" element={<SeriesPage />} />
             <Route path='/resultadoPesquisa' element={<PesquisaPorNome />}/>
-            <Route path='/movie/:id' element={<DetalhesFilme />} />
+            <Route path='/movie/:id/*' element={<DetalhesFilme />} />
           </Routes>
         </GlobalContext>
       </BrowserRouter>

@@ -1,21 +1,28 @@
-import React from 'react'
+import React from 'react';
 import Items from './Items/Items';
-import Loading from '../../helper/Loading/Loading'
-import style from './style.module.scss'
+import Loading from '../../helper/Loading/Loading';
+import style from './style.module.scss';
+import { Link } from 'react-router-dom';
 
-const AtoresDoFilme = ({dados, loading}) => {
-
+const AtoresDoFilme = ({ dados, loading }) => {
   return (
     <section className={style.elencoConteiner}>
-       <h2 className={style.elencoTitulo}>Elenco Principal</h2>
-       <ul className={style.elencoAtores}>
+      <div className={style.elencoTituloEBotao}>
+        <h2 className={style.elencoTitulo}>Elenco Principal</h2>
+        <Link to={'elenco'} className={style.elencoBotaoTodos}>
+          Todo o elenco
+        </Link>
+      </div>
+      <ul className={style.elencoAtores}>
         {loading && <Loading />}
-        {dados && dados.slice(0, 14).map((dado) => {
-          return <Items key={dado.id} dado={dado}/>
-        })}
-       </ul>
+        {dados &&
+          dados.slice(0, 14).map((dado) => {
+            return <Items key={dado.id} dado={dado} />;
+          })}
+      </ul>
     </section>
-  )
-}
+    
+  );
+};
 
-export default AtoresDoFilme
+export default AtoresDoFilme;

@@ -2,12 +2,33 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  .elencoTitulo {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--corTexto);
+  position: relative;
+  .elencoTituloEBotao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
+    .elencoTitulo {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--corTexto);
+    }
+    .elencoBotaoTodos {
+      right: 90px;
+      background-color: var(--corPrincipal);
+      border-radius: var(--borderRadius2);
+      border: none;
+      font-size: .95rem;
+      color: var(--branco);
+      padding: 10px 20px;
+      transition: all .2s ease;
+      opacity: .2;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
+
   .elencoAtores {
     display: flex;
     align-items: baseline;
@@ -15,7 +36,7 @@
     overflow-x: scroll;
     width: 100%;
     height: 350px;
-    a {
+    & > a {
       display: flex;
       flex-direction: column;
       border-radius: var(--borderRadius);
@@ -25,7 +46,7 @@
       border: 1px solid var(--bordaElementos);
       cursor: pointer;
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.11);
-      div:nth-child(1){
+      div:nth-child(1) {
         width: 100%;
         height: 220px;
         background-position: center;
@@ -40,11 +61,11 @@
         p {
           color: var(--corTexto);
           margin-bottom: 10px;
-          font-size: .95rem;
+          font-size: 0.95rem;
           font-weight: 500;
         }
         span {
-          font-size: .9rem;
+          font-size: 0.9rem;
         }
       }
     }

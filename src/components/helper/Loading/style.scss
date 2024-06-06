@@ -10,6 +10,8 @@
   backdrop-filter: blur(2px);
   height: 100%;
   transition: all .1s ease;
+  top: 0px;
+  left: 0px;
   svg {
     animation: animaLoading 1.5s ease infinite;
   }

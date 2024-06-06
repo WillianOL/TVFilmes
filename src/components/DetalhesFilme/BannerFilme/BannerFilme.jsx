@@ -1,8 +1,9 @@
 import React from 'react';
 import style from './style.module.scss';
 import { FaHeart } from 'react-icons/fa';
+import Loading from '../../helper/Loading/Loading';
 
-const BannerFilme = ({ dados }) => {
+const BannerFilme = ({ dados, loading }) => {
   const avaliacao = Math.floor(dados.vote_average * 10);
 
   return (
@@ -12,6 +13,7 @@ const BannerFilme = ({ dados }) => {
         backgroundImage: `url(https://image.tmdb.org/t/p/original/${dados.backdrop_path})`,
       }}
     >
+      {loading && <Loading />}
       <div className={style.bannerConteiner}>
         <article className={style.bannerImg}>
           <img

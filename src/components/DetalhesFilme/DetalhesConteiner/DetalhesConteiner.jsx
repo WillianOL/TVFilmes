@@ -9,7 +9,7 @@ const DetalhesConteiner = ({dados, loading}) => {
     <main style={{gap: '50px'}}>
       <BannerFilme dados={dados} loading={loading} />
       {dados.credits.cast && <AtoresDoFilme dados={dados.credits.cast} loading={loading}/>}
-      <Recomendacoes dados={dados.recommendations} />
+      <Recomendacoes dados={dados.recommendations} loading={loading} />
     </main>
   );
 };

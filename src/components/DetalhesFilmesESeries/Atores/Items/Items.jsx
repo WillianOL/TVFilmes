@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Items = ({ dado }) => {
+  console.log(dado);
   return (
     <Link to={`/person/${dado.id}`}>
       <div
@@ -11,7 +12,7 @@ const Items = ({ dado }) => {
       ></div>
       <div>
         <p>{dado.name}</p>
-        <span>{dado.character}</span>
+        <span>{dado.character || dado.job}</span>
       </div>
     </Link>
   );

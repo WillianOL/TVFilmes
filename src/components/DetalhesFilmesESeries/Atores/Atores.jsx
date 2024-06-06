@@ -4,7 +4,7 @@ import Loading from '../../helper/Loading/Loading';
 import style from './style.module.scss';
 import { Link } from 'react-router-dom';
 
-const AtoresDoFilme = ({ dados, loading }) => {
+const Atores = ({ dados, loading }) => {
   console.log(dados);
   return (
     <section className={style.elencoConteiner}>
@@ -17,7 +17,7 @@ const AtoresDoFilme = ({ dados, loading }) => {
       <ul className={style.elencoAtores}>
         {loading && <Loading />}
         {dados &&
-          dados.slice(0, 14).map((dado) => {
+          dados.cast.slice(0, 14).map((dado) => {
             return <Items key={dado.id} dado={dado} />;
           })}
       </ul>
@@ -26,4 +26,4 @@ const AtoresDoFilme = ({ dados, loading }) => {
   );
 };
 
-export default AtoresDoFilme;
+export default Atores;

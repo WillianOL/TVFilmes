@@ -78,3 +78,16 @@ export function GET_DETALHES_FILME(id) {
     },
   };
 }
+
+export function GET_DETALHES_SERIE(id) {
+  return {
+    url: `${API_URL}/tv/${id}?append_to_response=credits,recommendations&language=pt-BR`,
+    options: {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: AUTHORIZATION,
+      },
+    },
+  };
+}

@@ -3,7 +3,7 @@ import style from './style.module.scss';
 import { FaHeart } from 'react-icons/fa';
 import Loading from '../../helper/Loading/Loading';
 
-const BannerFilme = ({ dados, loading }) => {
+const Banner = ({ dados, loading }) => {
   const avaliacao = Math.floor(dados.vote_average * 10);
 
   return (
@@ -18,21 +18,21 @@ const BannerFilme = ({ dados, loading }) => {
         <article className={style.bannerImg}>
           <img
             src={`https://image.tmdb.org/t/p/original/${dados.poster_path}`}
-            alt={`Poster de ${dados.title}`}
+            alt={`Poster de ${dados.title || dados.name}`}
           />
         </article>
         <article className={style.bannerDados}>
           <div className={style.bannerTitulo}>
             <h1>
-              {dados.title}{' '}
+              {dados.title || dados.name}{' '}
               <span>
                 {'('}
-                {dados.release_date.slice(0, 4)}
+                {dados.release_date ? dados.release_date.slice(0, 4) : dados.first_air_date.slice(0, 4)}
                 {')'}
               </span>
             </h1>
             <div className={style.bannerGeneros}>
-              <p>{dados.release_date}</p>
+              <p>{dados.release_date || dados.first_air_date}</p>
               <ul>
                 {dados.genres.map((item) => (
                   <li key={item.id}>{item.name}</li>
@@ -68,4 +68,4 @@ const BannerFilme = ({ dados, loading }) => {
   );
 };
 
-export default BannerFilme;
+export default Banner;

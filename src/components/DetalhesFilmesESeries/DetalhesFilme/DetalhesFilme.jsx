@@ -1,11 +1,9 @@
 import React from 'react'
 import { Route, Routes, useParams } from 'react-router-dom'
-import useFetch from '../../hooks/useFetch'
-import { GET_DETALHES_FILME } from '../../api/api'
-import BannerFilme from './BannerFilme/BannerFilme'
-import AtoresDoFilme from './AtoresDoFilme/AtoresDoFilme'
-import TodosDoElenco from './TodosDoElenco/TodosDoElenco'
+import useFetch from '../../../hooks/useFetch'
+import { GET_DETALHES_FILME } from '../../../api/api'
 import DetalhesConteiner from './DetalhesConteiner/DetalhesConteiner'
+import TodosDoElenco from '../Atores/TodosDoElenco/TodosDoElenco'
 
 const DetalhesFilme = () => {
   const {id} = useParams()
@@ -22,7 +20,7 @@ const DetalhesFilme = () => {
     <main>
       <Routes>
         <Route path='' element={<DetalhesConteiner dados={dados} loading={loading} />}/>
-        <Route path='elenco' element={<TodosDoElenco dados={dados.credits.cast}/>}/>
+        <Route path='elenco' element={<TodosDoElenco dados={dados.credits}/>}/>
       </Routes>
     </main>
   )

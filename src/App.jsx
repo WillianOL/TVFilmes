@@ -7,8 +7,8 @@ import { GlobalContext } from './GlobalContext';
 import FilmesPage from './components/FilmesPage/FilmesPage';
 import SeriesPage from './components/SeriesPage/SeriesPage';
 import PesquisaPorNome from './components/PesquisaPorNome/PesquisaPorNome'
-import DetalhesFilme from './components/DetalhesFilme/DetalhesFilme';
-import TodosDoElenco from './components/DetalhesFilme/TodosDoElenco/TodosDoElenco';
+import DetalhesFilme from './components/DetalhesFilmesESeries/DetalhesFilme/DetalhesFilme';
+import DetalhesSerie from './components/DetalhesFilmesESeries/DetalhesSerie/DetalhesSerie';
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
             <Route path="/series" element={<SeriesPage />} />
             <Route path='/resultadoPesquisa' element={<PesquisaPorNome />}/>
             <Route path='/movie/:id/*' element={<DetalhesFilme />} />
+            <Route path='/tv/:id/*' element={<DetalhesSerie />} />
           </Routes>
         </GlobalContext>
       </BrowserRouter>

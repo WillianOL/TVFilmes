@@ -15,7 +15,7 @@ const Recomendacoes = ({ dados, loading }) => {
               <li key={item.id} className={style.itemRecomendacao}>
                 <Link to={`/${item.media_type}/${item.id}`}>
                   <div style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${item.backdrop_path})`}}></div>
-                  <p>{item.title}</p>
+                  <p>{item.title || item.name}</p>
                 </Link>
               </li>
             );

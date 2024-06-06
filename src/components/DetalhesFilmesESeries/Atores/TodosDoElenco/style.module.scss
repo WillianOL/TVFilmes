@@ -9,10 +9,22 @@
       align-items: center;
       justify-content: space-between;
       .tituloAtores {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         font-size: 1.6rem;
         font-weight: 600;
         color: var(--corTexto);
         position: relative;
+        span {
+          font-size: 1.1rem;
+          padding: 2px 5px;
+          font-weight: 500;
+          color: var(--corPrincipal);
+          border: 1px solid var(--bordaElementos);
+          background-color: var(--elementosDeFundo);
+          border-radius: var(--borderRadius2);
+        }
         &::before {
           position: absolute;
           content: '';

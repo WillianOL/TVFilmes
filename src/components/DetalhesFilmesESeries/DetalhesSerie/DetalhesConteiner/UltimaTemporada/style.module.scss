@@ -1,9 +1,14 @@
 .conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .tituloELink {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    max-width: 1600px;
+    width: 100%;
     h2 {
       font-size: 1.5rem;
       font-weight: 500;
@@ -27,6 +32,8 @@
   .temporadaConteiner {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 1600px;
     gap: 10px;
     border: 1px solid var(--bordaElementos);
     border-radius: var(--borderRadius);

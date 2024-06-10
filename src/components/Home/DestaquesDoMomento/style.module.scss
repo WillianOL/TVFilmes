@@ -1,4 +1,7 @@
 .destaqueConteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url('../../../imgs/secoes/linha_destaques.png');
   background-position: center;
   background-size: contain;
@@ -6,5 +9,7 @@
   .destaqueSeletores {
     display: flex;
     gap: 15px;
+    width: 100%;
+    max-width: 1600px;
   }
 }

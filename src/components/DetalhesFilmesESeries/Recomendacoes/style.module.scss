@@ -1,15 +1,19 @@
 .conteinerRecomendacoes {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   position: relative;
   .titulo {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--corTexto);
+    width: 100%;
+    max-width: 1600px;
   }
   .lista {
     display: flex;
+    max-width: 1600px;
     gap: 20px;
     overflow-x: scroll;
     &::-webkit-scrollbar {

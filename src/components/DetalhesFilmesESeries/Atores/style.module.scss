@@ -1,6 +1,7 @@
 .elencoConteiner {
   display: flex;
   justify-content: center;
+  align-items: center ;
   flex-direction: column;
   position: relative;
   .elencoTituloEBotao {
@@ -8,6 +9,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 1600px;
     .elencoTitulo {
       font-size: 1.5rem;
       font-weight: 500;
@@ -32,6 +35,7 @@
   .elencoAtores {
     display: flex;
     align-items: baseline;
+    max-width: 1600px;
     gap: 20px;
     overflow-x: scroll;
     &::-webkit-scrollbar {

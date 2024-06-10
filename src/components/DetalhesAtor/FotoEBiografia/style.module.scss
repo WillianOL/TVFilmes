@@ -1,0 +1,50 @@
+.atorConteiner {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-top: 20px;
+  width: 100%;
+  max-width: 1600px;
+  gap: 20px;
+  .atorFoto {
+    min-width: 310px;
+    height: 500px;
+    background-size: cover;
+    border-radius: var(--borderRadius);
+  }
+  .AtorInformacoes {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+    .atorNome {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--corTexto);
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: var(--corPrincipal);
+        bottom: 0px;
+        left: 0px;
+      }
+    }
+    .atorBiografia {
+      h2 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: var(--corTexto);
+        margin-bottom: 5px;
+      }
+      p {
+        color: var(--corTexto);
+        font-size: .9rem;
+      }
+    }
+  }
+}

@@ -91,3 +91,16 @@ export function GET_DETALHES_SERIE(id) {
     },
   };
 }
+
+export function GET_DETALHES_ATOR(id) {
+  return {
+    url: `${API_URL}person/${id}?append_to_response=combined_credits&language=pt-BR`,
+    options: {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: AUTHORIZATION,
+      },
+    },
+  };
+}

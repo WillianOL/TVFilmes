@@ -1,0 +1,40 @@
+.conteinerDados {
+  display: flex;
+  flex-direction: column;
+  min-width: 310px;
+  height: max-content;
+  border: 1px solid var(--bordaElementos);
+  padding: 20px;
+  border-radius: var(--borderRadius);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.048);
+  gap: 15px;
+  .tituloDados {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--corTexto);
+  }
+  .dados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--corTexto);
+    li {
+      h3 {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--corPrincipal);
+        path {
+          color: var(--corPrincipal);
+        }
+      }
+      p {
+        font-size: .9rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

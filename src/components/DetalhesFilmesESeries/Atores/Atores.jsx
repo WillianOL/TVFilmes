@@ -5,7 +5,6 @@ import style from './style.module.scss';
 import { Link } from 'react-router-dom';
 
 const Atores = ({ dados, loading }) => {
-  console.log(dados);
   return (
     <section className={style.elencoConteiner}>
       <div className={style.elencoTituloEBotao}>

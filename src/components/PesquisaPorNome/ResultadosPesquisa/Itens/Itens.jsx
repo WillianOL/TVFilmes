@@ -4,7 +4,7 @@ import style from './style.module.scss';
 
 const Itens = ({ dado }) => {
   return (
-    <div id={dado.id} className={style.itemConteiner}>
+    <li className={style.itemConteiner}>
       <Link to={`/${dado.media_type}/${dado.id}`} className={style.conteinerImg}>
         <img
           src={`https://image.tmdb.org/t/p/w500/${dado.poster_path || dado.profile_path}`}
@@ -20,7 +20,7 @@ const Itens = ({ dado }) => {
         </article>
         <p className={style.itemOverview}>{dado.overview || dado.known_for[0].title}</p>
       </div>
-    </div>
+    </li>
   );
 };
 

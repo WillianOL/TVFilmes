@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Items = ({ dado }) => {
-  console.log(dado);
   return (
     <Link to={`/person/${dado.id}`}>
       <div

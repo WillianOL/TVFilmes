@@ -14,4 +14,14 @@
     color: var(--corTexto);
     border-bottom: 1px solid var(--bordaElementos);
   }
+  h3 {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  & > div {
+    border-bottom: 1px solid var(--bordaElementos);
+    padding-bottom: 10px;
+  }
 }

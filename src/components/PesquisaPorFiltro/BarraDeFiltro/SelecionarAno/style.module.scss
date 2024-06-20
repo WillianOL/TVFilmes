@@ -1,0 +1,36 @@
+.conteinerAno {
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+      font-weight: 300;
+      font-size: .9rem;
+      color: var(--subTextos);
+    }
+    input {
+      font-size: .85rem;
+      border: 1px solid var(--elementosDeFundo);
+      padding: 5px;
+      border-radius: var(--borderRadius);
+      background-color: #F4F4F4;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.089);
+      outline: none;
+      color: var(--corPrincipal);
+      &::placeholder {
+        color: var(--subTextos);
+        font-weight: 300;
+      }
+      &:hover, &:focus {
+        outline: 1px solid var(--corPrincipal);
+        box-shadow: 0px 0px 0px 2px #8098c9;
+      }
+    }
+  }
+  .erroAno {
+    margin-top: 5px;
+    font-size: .80rem;
+    font-weight: 400;
+    color: var(--avRuim);
+  }
+}

@@ -1,0 +1,25 @@
+.conteinerOpcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  h3 {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    font-size: .85rem;
+    border: 1px solid var(--bordaElementos);
+    padding: 2px 5px;
+    border-radius: var(--borderRadius);
+    color: var(--subTextos);
+    font-weight: 300;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+  }
+}

@@ -40,9 +40,9 @@ export function GET_ATORES_POPULARES() {
   };
 }
 
-export function GET_GENERO() {
+export function GET_GENERO(type) {
   return {
-    url: `${API_URL}/genre/movie/list?language=pt-BR`,
+    url: `${API_URL}/genre/${type}/list?language=pt-BR`,
     options: {
       method: 'GET',
       headers: {
@@ -104,3 +104,19 @@ export function GET_DETALHES_ATOR(id) {
     },
   };
 }
+
+export function GET_POR_FILTRO(type, generos = '', palavras = '', ano = '') {
+  return {
+    url: `${API_URL}discover/${type}?include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=popularity.desc${
+      generos && `&with_genres=${generos}`
+    }${palavras && `&with_keywords=${palavras}`}${ano && `&year=${ano}`}`,
+    options: {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: AUTHORIZATION,
+      },
+    },
+  };
+}
+// https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&without_genres=a%C3%A7%C3%A3o&without_keywords=escapar&year=2000

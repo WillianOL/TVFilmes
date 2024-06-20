@@ -46,3 +46,17 @@ main {
   flex-direction: column;
   gap: 150px;
 }
+
+main.filtroConteiner {
+  gap: 10px;
+  h1 {
+    padding: 10px 90px;
+  }
+}
+
+label.checado {
+  background-color: var(--corPrincipal);
+  color: var(--branco) !important;
+  border-color: #27498c !important;
+  font-weight: 400 !important;
+}

@@ -19,7 +19,7 @@ const SeriesFiltro = () => {
   return (
     <main className="filtroConteiner" >
       {loading && <Loading />}
-      <h1>Filmes por filtro</h1>
+      <h1>Séries por filtro</h1>
       <div className={style.conteiner}>
         <BarraDeFiltro type="tv" setResultadoFiltro={setResultadoFiltro} />
         {dados && (

@@ -1,0 +1,25 @@
+.buttonSubmit {
+  align-self: center;
+  font-size: 1.1rem;
+  width: fit-content;
+  padding: 8px 40px;
+  min-width: 150px;
+  margin-top: 20px;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--bordaElementos);
+  background-color: var(--corPrincipal);
+  color: var(--branco);
+  cursor: pointer;
+  transition: all .2s ease;
+  &:hover {
+    background-color: var(--elementosDeFundo);
+    border-color: var(--corPrincipal);
+    color: var(--corPrincipal);
+  }
+  &:disabled {
+    background-color: var(--elementosDeFundo);
+    color: var(--branco);
+    cursor: no-drop;
+    border: transparent;
+  }
+}

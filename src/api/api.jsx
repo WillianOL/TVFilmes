@@ -105,10 +105,23 @@ export function GET_DETALHES_ATOR(id) {
   };
 }
 
-export function GET_POR_FILTRO(type, generos = '', palavras = '', ano = '') {
+export function GET_KEYWORD(query) {
+  return {
+    url: `${API_URL}search/keyword?query=${query}&page=1`,
+    options: {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: AUTHORIZATION,
+      },
+    },
+  };
+}
+
+export function GET_POR_FILTRO({type, generos = '', palavras = '', ano = ''}) {
   return {
     url: `${API_URL}discover/${type}?include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=popularity.desc${
-      generos && `&with_genres=${generos}`
+      generos && `&with_genres=${generos.join('%2C%20')}`
     }${palavras && `&with_keywords=${palavras}`}${ano && `&year=${ano}`}`,
     options: {
       method: 'GET',

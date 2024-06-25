@@ -12,7 +12,9 @@
     color: var(--subTextos);
     font-weight: 300;
     cursor: pointer;
-
+    &:hover {
+      background-color: var(--elementosDeFundo);
+    }
     input {
       display: none;
     }

@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.scss'
 import { Link } from 'react-router-dom';
 
-const Itens = ({ dado }) => {
+const Itens = ({ dado, media }) => {
   const nota = Math.floor(dado.vote_average * 10)
   let corNota;
   if(nota <= 50) {
@@ -14,7 +14,7 @@ const Itens = ({ dado }) => {
   }
 
   return (
-    <Link to={`/${dado && dado.media_type}/${dado.id}`} className={style.itemConteiner}>
+    <Link to={`/${dado && media || dado.media_type}/${dado.id}`} className={style.itemConteiner}>
       <div>
         <span className={style.itemNota} style={{backgroundColor: corNota}}>{nota}</span>
         <img

@@ -48,9 +48,23 @@ main {
 }
 
 main.filtroConteiner {
+  position: relative;
   gap: 10px;
+  padding-bottom: 20px;
   h1 {
     padding: 10px 90px;
+    font-weight: 600;
+    color: var(--corTexto);
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--corPrincipal);
+      bottom: 0px;
+    }
   }
 }
 
@@ -59,4 +73,7 @@ label.checado {
   color: var(--branco) !important;
   border-color: #27498c !important;
   font-weight: 400 !important;
+  &:hover {
+    background-color:#27498c !important;
+  }
 }

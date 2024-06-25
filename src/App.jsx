@@ -10,6 +10,7 @@ import DetalhesSerie from './components/DetalhesFilmesESeries/DetalhesSerie/Deta
 import DetalhesAtor from './components/DetalhesAtor/DetalhesAtor';
 import FilmesFiltro from './components/PesquisaPorFiltro/FilmesFiltro/FilmesFiltro';
 import SeriesFiltro from './components/PesquisaPorFiltro/SeriesFiltro/SeriesFiltro';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/tv/:id/*" element={<DetalhesSerie />} />
             <Route path="/person/:id/*" element={<DetalhesAtor />} />
           </Routes>
+          <Footer />
         </GlobalContext>
       </BrowserRouter>
     </>

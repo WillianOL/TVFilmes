@@ -3,7 +3,6 @@ import style from './Header.module.scss';
 import { PiFilmSlateFill } from 'react-icons/pi';
 import Navegacao from './Navegacao/Navegacao';
 import { NavLink } from 'react-router-dom';
-import BarraPesquisa from '../BarraPesquisa/BarraPesquisa';
 import BarraPesquisaHeader from '../BarraPesquisa/BarraPesquisaHeader/BarraPesquisaHeader';
 
 const Header = () => {

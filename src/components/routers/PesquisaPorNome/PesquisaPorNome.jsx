@@ -5,6 +5,7 @@ import useFetch from '../../../hooks/useFetch';
 import { UserContext } from '../../../GlobalContext';
 import { GET_RESULTADO_PESQUISA } from '../../../api/api';
 import style from './style.module.scss';
+import Loading from '../../helper/Loading/Loading';
 
 const ResultadoPesquisa = () => {
   const { valorPesquisa } = React.useContext(UserContext);
@@ -15,14 +16,17 @@ const ResultadoPesquisa = () => {
     requisicao(url, options);
   }, [requisicao, valorPesquisa]);
 
+  if(error) return <p>Ocorreu um erro inesperado, volte ao inicio</p>
   return (
-    <section className={style.conteiner}>
-      {dados && <Categorias dados={dados} />}
-      <ResultadosPesquisa
-        loading={loading}
-        error={error}
-      />
-    </section>
+    <main className={style.conteiner}>
+      {loading && <Loading />}
+      {dados && (
+        <>
+          <Categorias dados={dados} />
+          <ResultadosPesquisa />
+        </>
+      )}
+    </main>
   );
 };
 

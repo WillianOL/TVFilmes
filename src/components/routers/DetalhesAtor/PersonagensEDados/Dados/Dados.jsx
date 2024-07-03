@@ -39,7 +39,7 @@ const Dados = ({dados}) => {
         </li>
         <li>
           <h3>Também conhecido(a) como: <BiWorld /></h3>
-          {dados.also_known_as.map(item => <p>{item}</p>)}
+          {dados.also_known_as.map(item => <p key={item}>{item}</p>)}
         </li>
       </ul>
     </div>

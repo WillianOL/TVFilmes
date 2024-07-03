@@ -4,6 +4,7 @@ import useFetch from '../../../../hooks/useFetch'
 import { GET_DETALHES_FILME } from '../../../../api/api'
 import DetalhesConteiner from './DetalhesConteiner/DetalhesConteiner'
 import TodosDoElenco from '../Atores/TodosDoElenco/TodosDoElenco'
+import Loading from '../../../helper/Loading/Loading'
 
 const DetalhesFilme = () => {
   const {id} = useParams()
@@ -15,13 +16,15 @@ const DetalhesFilme = () => {
   }, [requisicao, id])
 
   if(error) return <p>Ocorreu um error inesperado, volte ao inicio</p>
-  if(dados)
   return (
     <main>
-      <Routes>
-        <Route path='' element={<DetalhesConteiner dados={dados} loading={loading} />}/>
-        <Route path='elenco' element={<TodosDoElenco dados={dados.credits}/>}/>
-      </Routes>
+      {loading && <Loading />}
+      {dados && (
+        <Routes>
+          <Route path='' element={<DetalhesConteiner dados={dados} loading={loading} />}/>
+          <Route path='elenco' element={<TodosDoElenco dados={dados.credits}/>}/>
+        </Routes>
+      )}
     </main>
   )
 }

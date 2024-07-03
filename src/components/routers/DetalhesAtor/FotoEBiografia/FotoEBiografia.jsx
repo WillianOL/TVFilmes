@@ -3,7 +3,6 @@ import style from './style.module.scss';
 import ConhecidoPor from '../ConhecidoPor/ConhecidoPor';
 
 const FotoEBiografia = ({ dados, loading }) => {
-  console.log(dados);
   return (
     <section className={style.atorConteiner}>
       <div

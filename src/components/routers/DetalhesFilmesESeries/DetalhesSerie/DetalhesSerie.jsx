@@ -5,6 +5,7 @@ import { Route, Routes, useParams } from 'react-router-dom'
 import DetalhesConteiner from './DetalhesConteiner/DetalhesConteiner'
 import TodosDoElenco from '../Atores/TodosDoElenco/TodosDoElenco'
 import Temporadas from './Temporadas/Temporadas'
+import Loading from '../../../helper/Loading/Loading'
 
 const DetalhesSerie = () => {
   const {dados, requisicao, loading, error} = useFetch()
@@ -16,14 +17,17 @@ const DetalhesSerie = () => {
   }, [id, requisicao])
 
   if(error) return <p>Ocorreu um erro inesperado, volte ao inicio</p>
-  if(dados)
   return (
     <main>
-      <Routes>
-        <Route path="" element={<DetalhesConteiner dados={dados} loading={loading}/>} />
-        <Route path="elenco" element={<TodosDoElenco dados={dados.credits} loading={loading}/>} />
-        <Route path="temporadas" element={<Temporadas dados={dados.seasons} />}/>
-      </Routes>
+      {loading && <Loading />}
+      {dados && (
+        <Routes>
+          <Route path="" element={<DetalhesConteiner dados={dados} loading={loading}/>} />
+          <Route path="elenco" element={<TodosDoElenco dados={dados.credits} loading={loading}/>} />
+          <Route path="temporadas" element={<Temporadas dados={dados.seasons} />}/>
+        </Routes>
+      )}
+
     </main>
   )
 }

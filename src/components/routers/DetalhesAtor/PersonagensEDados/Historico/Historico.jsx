@@ -17,7 +17,7 @@ const Historico = ({ dados }) => {
         {HistoricoOrdenado.map((dado) => {
           if (dado.character || dado.release_date || dado.first_air_date)
             return (
-              <li className={style.historicoItem}>
+              <li key={dado.id} className={style.historicoItem}>
                 {dado.release_date && <p>{dado.release_date.slice(0, 4)}</p>}
                 {dado.first_air_date && (
                   <p>{dado.first_air_date.slice(0, 4)}</p>

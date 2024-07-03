@@ -1,17 +1,17 @@
 import React from 'react';
 import './GlobalStyle.scss';
-import Header from './components/Header/Header';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
-import { GlobalContext } from './GlobalContext';
-import PesquisaPorNome from './components/PesquisaPorNome/PesquisaPorNome';
-import DetalhesFilme from './components/DetalhesFilmesESeries/DetalhesFilme/DetalhesFilme';
-import DetalhesSerie from './components/DetalhesFilmesESeries/DetalhesSerie/DetalhesSerie';
-import DetalhesAtor from './components/DetalhesAtor/DetalhesAtor';
-import FilmesFiltro from './components/PesquisaPorFiltro/FilmesFiltro/FilmesFiltro';
-import SeriesFiltro from './components/PesquisaPorFiltro/SeriesFiltro/SeriesFiltro';
+import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import TodosOsFavoritos from './components/TodosOsFavoritos/TodosOsFavoritos';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { GlobalContext } from './GlobalContext';
+import PesquisaPorNome from './components/routers/PesquisaPorNome/PesquisaPorNome';
+import DetalhesFilme from './components/routers/DetalhesFilmesESeries/DetalhesFilme/DetalhesFilme';
+import DetalhesSerie from './components/routers/DetalhesFilmesESeries/DetalhesSerie/DetalhesSerie';
+import DetalhesAtor from './components/routers/DetalhesAtor/DetalhesAtor';
+import FilmesFiltro from './components/routers/PesquisaPorFiltro/FilmesFiltro/FilmesFiltro';
+import SeriesFiltro from './components/routers/PesquisaPorFiltro/SeriesFiltro/SeriesFiltro';
+import TodosOsFavoritos from './components/routers/TodosOsFavoritos/TodosOsFavoritos';
 
 function App() {
   return (

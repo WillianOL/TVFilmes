@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const TodosDoElenco = ({ dados }) => {
   const historico = useNavigate()
   const totalPessoasEnvolvidas = dados.cast.length + dados.crew.length
-
+  
   return (
     <main className={style.conteiner}>
       <section className={style.sectionAtores}>

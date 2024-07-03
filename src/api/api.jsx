@@ -3,7 +3,7 @@ const API_URL = 'https://api.themoviedb.org/3/';
 
 export function GET_POPULARES(plataforma) {
   return {
-    url: `${API_URL}${plataforma}/popular?language=pt-BR&page=1`,
+    url: `${API_URL}/trending/${plataforma}/day?language=pt-BR`,
     options: {
       method: 'GET',
       headers: {

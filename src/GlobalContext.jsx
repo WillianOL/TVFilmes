@@ -7,7 +7,6 @@ export const GlobalContext = ({ children }) => {
   const [activeBarraPesquisa, setActiveBarraPesquisa] = React.useState(false);
   const [modalFavoritos, setModalFavoritos] = React.useState(false);
   const [errorPesquisa, setErrorPesquisa] = React.useState(null);
-  const [valorPesquisa, setValorPesquisa] = React.useState('');
   const [resultadoPesquisa, setResultadoPesquisa] = React.useState(null);
 
   const [favoritos, setFavoritos] = React.useState(() => {
@@ -37,17 +36,6 @@ export const GlobalContext = ({ children }) => {
     setFavoritos(filtroItemDeletado)
   }
 
-  const navigate = useNavigate();
-  function pesquisar(valorPesquisa) {
-    if (valorPesquisa === '') {
-      setErrorPesquisa('Digite algo para realizar a pesquisa');
-    } else {
-      navigate('/resultadoPesquisa');
-      setValorPesquisa(valorPesquisa);
-      setErrorPesquisa(null);
-    }
-  }
-
   return (
     <UserContext.Provider
       value={{
@@ -57,10 +45,8 @@ export const GlobalContext = ({ children }) => {
         favoritos,
         modalFavoritos,
         setModalFavoritos,
-        pesquisar,
         errorPesquisa,
         setErrorPesquisa,
-        valorPesquisa,
         resultadoPesquisa,
         setResultadoPesquisa,
         adicionarFavoritos,

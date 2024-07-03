@@ -32,7 +32,7 @@ const Favoritos = () => {
         className={style.conteinerFavoritos}
       >
         <div className={style.favoritos}>
-          {favoritos.length === 0 ? (<p>Adicione filmes aos seus favoritos!</p>) : (
+          {favoritos.length === 0 ? (<p>Adicione filmes/series aos seus favoritos!</p>) : (
            favoritos.map(dado => <ItemFavorito key={dado.id} dado={dado} />)
           )}
         </div>

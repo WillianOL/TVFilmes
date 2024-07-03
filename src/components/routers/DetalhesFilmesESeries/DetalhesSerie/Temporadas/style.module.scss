@@ -1,21 +1,42 @@
 .conteiner {
   padding-top: 20px;
   padding-bottom: 20px;
-  .titulo {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--corTexto);
-    margin-bottom: 20px;
-    span {
-      font-size: 1.4rem;
-      padding: 0px 10px;
-      font-weight: 500;
+  .tituloBotao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .titulo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--corTexto);
+      margin-bottom: 20px;
+      span {
+        font-size: 1.4rem;
+        padding: 0px 10px;
+        font-weight: 500;
+        border-radius: var(--borderRadius2);
+        color: var(--corPrincipal);
+        border: 1px solid var(--bordaElementos);
+        background-color: var(--elementosDeFundo);
+      }
+    }
+    button {
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 10px;
+      background-color: var(--corPrincipal);
+      color: var(--branco);
       border-radius: var(--borderRadius2);
-      color: var(--corPrincipal);
-      border: 1px solid var(--bordaElementos);
-      background-color: var(--elementosDeFundo);
+      border: 1px solid var(--corPrincipal);
+      cursor: pointer;
+      transition: all .2s ease;
+      &:hover {
+        background-color: var(--elementosDeFundo);
+        color: var(--corPrincipal);
+      }
     }
   }
+
   .temporadasConteiner {
     display: flex;
     gap: 20px;
@@ -52,11 +73,10 @@
             width: max-content;
             border-radius: var(--borderRadius2);
             color: var(--corPrincipal);
-            font-size: .85rem;
+            font-size: 0.85rem;
             border: 1px solid var(--bordaElementos);
           }
         }
-
       }
     }
   }

@@ -16,7 +16,7 @@ const ItemFavorito = ({ dado }) => {
       ></div>
       <div className={style.informacoes}>
         <h2>{dado.name || dado.title}</h2>
-        <p>{`"${dado.tagline}"`}</p>
+        <p>{dado.tagline && `"${dado.tagline}"`}</p>
       </div>
     </Link>
   );

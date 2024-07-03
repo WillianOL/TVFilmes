@@ -3,10 +3,11 @@ import { MdOutlineFavorite } from 'react-icons/md';
 import style from './style.module.scss';
 import { UserContext } from '../../../GlobalContext';
 import { Link } from 'react-router-dom';
+import ItemFavorito from './ItemFavorito';
 
 const Favoritos = () => {
   const {
-    numFavoritos,
+    favoritos,
     setBarraPesquisa,
     barraPesquisa,
     modalFavoritos,
@@ -22,8 +23,8 @@ const Favoritos = () => {
     <div className={style.conteiner}>
       <div onClick={toggleMenu} className={style.botaoFavorito}>
         <MdOutlineFavorite className={style.iconeFavorito} />
-        {numFavoritos != 0 && (
-          <span className={style.numero_favoritos}>{numFavoritos}</span>
+        {favoritos.length != 0 && (
+          <span className={style.numero_favoritos}>{favoritos.length}</span>
         )}
       </div>
       <div
@@ -31,7 +32,9 @@ const Favoritos = () => {
         className={style.conteinerFavoritos}
       >
         <div className={style.favoritos}>
-          {numFavoritos === 0 && <p>Adicione filmes aos seus favoritos!</p>}
+          {favoritos.length === 0 ? (<p>Adicione filmes aos seus favoritos!</p>) : (
+           favoritos.map(dado => <ItemFavorito key={dado.id} dado={dado} />)
+          )}
         </div>
         <Link to="/todosOsFavoritos" onClick={toggleMenu}>
           Todos os favoritos

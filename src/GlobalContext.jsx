@@ -7,21 +7,44 @@ export const GlobalContext = ({ children }) => {
   const [activeBarraPesquisa, setActiveBarraPesquisa] = React.useState(false);
   const [modalFavoritos, setModalFavoritos] = React.useState(false);
   const [errorPesquisa, setErrorPesquisa] = React.useState(null);
-  const [valorPesquisa, setValorPesquisa] = React.useState('')
-  const [resultadoPesquisa, setResultadoPesquisa] = React.useState(null)
+  const [valorPesquisa, setValorPesquisa] = React.useState('');
+  const [resultadoPesquisa, setResultadoPesquisa] = React.useState(null);
 
-  const [numFavoritos, setNumFavoritos] = React.useState(() => {
-    return localStorage.getItem('filmesFavoritos') || 0;
+  const [favoritos, setFavoritos] = React.useState(() => {
+    return JSON.parse(localStorage.getItem('filmesFavoritos')) || [];
   });
+  const [favoritoErro ,setFavoritoErro] = React.useState(null)
 
-  const navigate = useNavigate()
+  React.useEffect(() => {
+    localStorage.setItem('filmesFavoritos', JSON.stringify(favoritos))
+  }, [favoritos])
+
+  function adicionarFavoritos(dados) {
+    const itemAdicionado = favoritos.find(item => (dados.title || dados.name) === (item.name || item.title))
+    if(itemAdicionado) {
+      setFavoritoErro('Item já adicionado aos favoritos!')
+      setTimeout(() => {
+        setFavoritoErro(null)
+      }, 3000)
+      return
+    }
+    setFavoritos([...favoritos, dados])
+    setFavoritoErro(null)
+  }
+
+  function deletarFavoritos(dado) {
+    const filtroItemDeletado = favoritos.filter(item => (item.title || item.name) !== (dado.title || dado.name))
+    setFavoritos(filtroItemDeletado)
+  }
+
+  const navigate = useNavigate();
   function pesquisar(valorPesquisa) {
     if (valorPesquisa === '') {
       setErrorPesquisa('Digite algo para realizar a pesquisa');
     } else {
-      navigate('/resultadoPesquisa')
-      setValorPesquisa(valorPesquisa)
-      setErrorPesquisa(null)
+      navigate('/resultadoPesquisa');
+      setValorPesquisa(valorPesquisa);
+      setErrorPesquisa(null);
     }
   }
 
@@ -30,8 +53,8 @@ export const GlobalContext = ({ children }) => {
       value={{
         activeBarraPesquisa,
         setActiveBarraPesquisa,
-        numFavoritos,
-        setNumFavoritos,
+        setFavoritos,
+        favoritos,
         modalFavoritos,
         setModalFavoritos,
         pesquisar,
@@ -39,7 +62,10 @@ export const GlobalContext = ({ children }) => {
         setErrorPesquisa,
         valorPesquisa,
         resultadoPesquisa,
-        setResultadoPesquisa
+        setResultadoPesquisa,
+        adicionarFavoritos,
+        favoritoErro,
+        deletarFavoritos,
       }}
     >
       {children}

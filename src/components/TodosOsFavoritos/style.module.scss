@@ -1,0 +1,130 @@
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 90px;
+  gap: 20px;
+  .titulo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--corTexto);
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      border-radius: 3px;
+      background-color: var(--corPrincipal);
+      bottom: 0px;
+    }
+  }
+  .itensConteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    .frase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.1rem;
+      gap: 10px;
+      svg {
+        font-size: 3rem;
+        path {
+          color: var(--corPrincipal);
+        }
+      }
+    }
+    .itemConteiner {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      padding: 20px;
+      border-radius: var(--borderRadius);
+      border: 1px solid var(--bordaElementos);
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.048);
+      width: 100%;
+      max-width: 660px;
+      transition: all 0.2s ease;
+      background-color: white;
+      &:hover {
+        background-color: var(--elementosDeFundo);
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        overflow: hidden;
+        position: relative;
+        background-color: inherit;
+        &::before {
+          position: absolute;
+          content: '...';
+          background-color: inherit;
+          color: var(--corTexto);
+          bottom: 45px;
+          font-size: 1.5rem;
+          right: 0px;
+        }
+        .imgConteiner {
+          min-width: 130px;
+          height: 200px;
+          border-radius: var(--borderRadius);
+          background-position: center;
+          background-size: cover;
+        }
+        .informacoes {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          h2 {
+            font-size: 1.5rem;
+            color: var(--corPrincipal);
+            font-weight: 500;
+          }
+          p {
+            font-size: 0.9rem;
+            max-width: 1100px;
+            text-wrap: nowrap;
+            color: var(--corTexto);
+            &:nth-child(2) {
+              font-size: 0.9rem;
+              color: var(--subTextos);
+              font-style: italic;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      &:hover {
+        .buttonDelete {
+          opacity: 1;
+        }
+      }
+      .buttonDelete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 10px;
+        font-size: 1.1rem;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        cursor: pointer;
+        opacity: 0.1;
+        background-color: var(--corPrincipal);
+        transition: all 0.2s ease;
+        path {
+          color: var(--branco);
+        }
+        &:hover {
+          background-color: var(--avRuim);
+        }
+      }
+    }
+  }
+}

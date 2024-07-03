@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 const UltimaTemporada = ({ dados, loading }) => {
   const ultimaTempNumero = dados.seasons.length - 1;
   const ultimaTemp = dados.seasons[ultimaTempNumero];
-  console.log(ultimaTemp);
-
+  
   return (
     <section className={style.conteiner}>
       <div className={style.tituloELink}>

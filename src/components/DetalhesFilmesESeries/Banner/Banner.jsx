@@ -2,9 +2,11 @@ import React from 'react';
 import style from './style.module.scss';
 import { FaHeart } from 'react-icons/fa';
 import Loading from '../../helper/Loading/Loading';
+import { UserContext } from '../../../GlobalContext';
 
 const Banner = ({ dados, loading }) => {
   const avaliacao = Math.floor(dados.vote_average * 10);
+  const {adicionarFavoritos, favoritoErro} = React.useContext(UserContext)
 
   return (
     <section
@@ -51,9 +53,10 @@ const Banner = ({ dados, loading }) => {
             <p>Avaliação dos usuários</p>
           </div>
           <div className={style.bannerBotaoFavorito}>
-            <button>
+            <button onClick={() => adicionarFavoritos(dados)}>
               <FaHeart />
             </button>
+            {favoritoErro && <span>{favoritoErro}</span>}
           </div>
           <div className={style.bannerTexto}>
             <p>{dados.tagline && `"${dados.tagline}"`}</p>

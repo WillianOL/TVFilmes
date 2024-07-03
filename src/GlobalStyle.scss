@@ -45,6 +45,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 150px;
+  min-height: 100vh;
 }
 
 main.filtroConteiner {

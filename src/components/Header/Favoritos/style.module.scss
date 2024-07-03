@@ -1,5 +1,6 @@
 .conteiner {
   position: relative;
+  z-index: 10000;
   .botaoFavorito {
     display: flex;
     align-items: center;
@@ -26,10 +27,10 @@
       position: absolute;
       color: white;
       background-color: var(--avRuim);
-      width: 15px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
-      height: 15px;
-      border: 3px solid var(--branco);
+      border: 2px solid var(--branco);
       font-size: .8rem;
       font-weight: 500;
       top: 0px;
@@ -51,6 +52,20 @@
     padding: 10px;
     animation: abrirConteiner .2s ease;
     .favoritos {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      padding: 10px;
+      &::-webkit-scrollbar {
+        border-radius: 10px;
+        height: 10px;
+        width: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--elementosDeFundo);
+        border-radius: 10px;
+      }
+      gap: 10px;
       height: 90%;
       width: 100%;
       & > p {
@@ -63,7 +78,7 @@
         text-align: center;
       }
     }
-    a {
+    & > a {
       padding: 15px 20px;
       border-radius: var(--borderRadius);
       background-color: var(--corPrincipal);
@@ -75,6 +90,54 @@
       &:hover {
         background-color: var(--elementosDeFundo);
         color: var(--corPrincipal);
+      }
+    }
+  }
+
+  .itemFavorito {
+    display: flex;
+    padding: 10px !important;
+    gap: 10px;
+    align-items: center;
+    background-color: var(--branco);
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--bordaElementos);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.089);
+    &:hover {
+      background-color: var(--elementosDeFundo);
+    }
+    .imgConteiner {
+      min-width: 80px;
+      height: 100px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: var(--borderRadius);
+    }
+    .informacoes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--corTexto);
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 20px;
+          height: 2px;
+          background-color: var(--subTextos);
+          border-radius: 2px;
+          bottom: 0px;
+        }
+      }
+      p {
+        font-size: .85rem;
+        color: var(--subTextos);
+        font-weight: 400;
+        font-style: italic;
       }
     }
   }

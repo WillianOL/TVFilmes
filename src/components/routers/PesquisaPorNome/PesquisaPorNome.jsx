@@ -2,7 +2,6 @@ import React from 'react';
 import Categorias from './Categorias/Categorias';
 import ResultadosPesquisa from './ResultadosPesquisa/ResultadosPesquisa';
 import useFetch from '../../../hooks/useFetch';
-import { UserContext } from '../../../GlobalContext';
 import { GET_RESULTADO_PESQUISA } from '../../../api/api';
 import style from './style.module.scss';
 import Loading from '../../helper/Loading/Loading';

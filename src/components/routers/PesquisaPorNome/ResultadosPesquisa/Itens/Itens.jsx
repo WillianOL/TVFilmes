@@ -18,7 +18,7 @@ const Itens = ({ dado }) => {
           </h2>
           <p>{dado.first_air_date || dado.release_date}</p>
         </article>
-        <p className={style.itemOverview}>{dado.overview || dado.known_for[0].title}</p>
+        <p className={style.itemOverview}>{dado.overview}</p>
       </div>
     </li>
   );

@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-src/api/authorization.jsx
+./src/api/authorization.jsx
 
 # Editor directories and files
 .vscode/*

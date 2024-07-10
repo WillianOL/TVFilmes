@@ -4,6 +4,7 @@ import { PiFilmSlateFill } from 'react-icons/pi';
 import Navegacao from './Navegacao/Navegacao';
 import { NavLink } from 'react-router-dom';
 import BarraPesquisaHeader from '../BarraPesquisa/BarraPesquisaHeader/BarraPesquisaHeader';
+import MobileMenu from './MobileMenu/MobileMenu';
 
 const Header = () => {
   return (
@@ -15,6 +16,7 @@ const Header = () => {
         </NavLink>
         <Navegacao />
         <BarraPesquisaHeader />
+        <MobileMenu />
       </div>
     </header>
   );

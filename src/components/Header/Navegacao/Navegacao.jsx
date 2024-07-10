@@ -1,6 +1,5 @@
 import React from 'react';
 import Favoritos from '../Favoritos/Favoritos';
-import BarraPesquisa from '../../BarraPesquisa/BarraPesquisa';
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '../../../GlobalContext';
 import style from './style.module.scss';

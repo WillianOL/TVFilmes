@@ -26,6 +26,9 @@
 
 header, footer, section {
   padding: 0px 90px;
+  @media(max-width: 1000px) {
+    padding: 0px 10px;
+  }
 }
 
 a, p {

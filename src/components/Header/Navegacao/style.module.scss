@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   gap: 15px;
-
   .links {
     display: flex;
     font-weight: 500;
@@ -43,5 +42,8 @@
       color: var(--corPrincipal);
       border-color: var(--corPrincipal);
     }
+  }
+  @media(max-width: 1000px) {
+    display: none;
   }
 }

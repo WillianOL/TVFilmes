@@ -4,7 +4,7 @@ import style from './style.module.scss';
 import { UserContext } from '../../GlobalContext';
 import { Link } from 'react-router-dom';
 
-const BarraPesquisa = () => {
+const BarraPesquisa = ({mobile}) => {
   const { setErrorPesquisa, errorPesquisa } =
     React.useContext(UserContext);
   const [value, setValue] = React.useState('');
@@ -22,7 +22,7 @@ const BarraPesquisa = () => {
   }
 
   return (
-    <div className={style.barraPesquisa}>
+    <div className={mobile ? style.barraPesquisaMobile : style.barraPesquisa}>
       <input
         type="text"
         value={value}

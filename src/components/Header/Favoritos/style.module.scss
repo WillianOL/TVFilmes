@@ -51,6 +51,11 @@
     border-radius: var(--borderRadius);
     padding: 10px;
     animation: abrirConteiner .2s ease;
+    @media(max-width: 1000px) {
+      right: -53px;
+      max-width: 400px;
+      width: 100vw;
+    }
     .favoritos {
       display: flex;
       flex-direction: column;

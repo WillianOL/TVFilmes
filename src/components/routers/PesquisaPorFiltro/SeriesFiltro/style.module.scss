@@ -1,6 +1,35 @@
-.conteiner {
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 90px;
-  gap: 30px;
+.filtroConteiner {
+  position: relative;
+  gap: 10px;
+  padding-bottom: 20px;
+  h1 {
+    padding: 10px 90px;
+    font-weight: 600;
+    color: var(--corTexto);
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--corPrincipal);
+      bottom: 0px;
+    }
+  }
+  .conteiner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 90px;
+    gap: 30px;
+  }
+  @media(max-width: 1000px) {
+    h1 {
+      padding: 10px;
+    }
+    .conteiner {
+      padding: 0px 10px;
+      flex-direction: column;
+    }
+  }
 }

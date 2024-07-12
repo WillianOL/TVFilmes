@@ -19,4 +19,7 @@
       display: none;
     }
   }
+  @media(max-width: 1000px) {
+    min-width: 400px;
+  }
 }

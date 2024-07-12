@@ -17,7 +17,7 @@ const FilmesFiltro = () => {
 
   if (error) return <p>Ocorreu um erro inesperado, voltei ao inicio.</p>;
   return (
-    <main className="filtroConteiner" >
+    <main className={style.filtroConteiner} >
       {loading && <Loading />}
       <h1>Filmes por filtro</h1>
       <div className={style.conteiner}>

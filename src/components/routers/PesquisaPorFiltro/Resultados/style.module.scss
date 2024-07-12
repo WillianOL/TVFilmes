@@ -8,4 +8,10 @@
     flex-wrap: wrap;
     gap: 20px;
   }
+  @media (max-width: 1000px) {
+    align-items: center;
+    .resultadosItens {
+      justify-content: center;
+    }
+  }
 }

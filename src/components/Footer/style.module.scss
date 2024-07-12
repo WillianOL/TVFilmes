@@ -89,6 +89,10 @@
     }
   }
   @media(max-width: 1000px) {
-    padding: 50px 20px; 
+    padding: 50px 20px;
+    .informacoes {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }

@@ -90,7 +90,7 @@
             text-wrap: nowrap;
             color: var(--corTexto);
             &:nth-child(2) {
-              font-size: 0.9rem;
+              font-size: .9rem;
               color: var(--subTextos);
               font-style: italic;
               font-weight: 400;
@@ -123,6 +123,32 @@
         }
         &:hover {
           background-color: var(--avRuim);
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    padding: 10px;
+    .frase {
+      text-align: center;
+    }
+    .itemConteiner {
+      a {
+        &::before {
+          display: none;
+        }
+        flex-direction: column;
+        .informacoes {
+          flex-direction: column;
+          align-items: center;
+          p {
+            text-wrap: wrap !important;
+            text-align: center;
+            font-size: .85rem !important;
+            &:nth-child(2) {
+              font-size: .8rem !important;
+            }
+          }
         }
       }
     }

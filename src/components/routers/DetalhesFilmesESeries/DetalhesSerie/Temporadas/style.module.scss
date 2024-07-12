@@ -4,7 +4,7 @@
   .tituloBotao {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     .titulo {
       font-size: 1.6rem;
       font-weight: 600;
@@ -76,6 +76,21 @@
             font-size: 0.85rem;
             border: 1px solid var(--bordaElementos);
           }
+        }
+      }
+    }
+  }
+  @media(max-width: 1000px) {
+    .temporadasConteiner {
+      .temporada {
+        .poster {
+          min-width: 140px;
+          height: 200px;
+        }
+      }
+      .informacoes {
+        p {
+          font-size: .85rem;
         }
       }
     }

@@ -19,7 +19,7 @@ const DestaquesDoMomento = () => {
   return (
     <section className={style.destaqueConteiner}>
       <nav className={style.destaqueSeletores}>
-        <Titulo>Destaques do momento</Titulo>
+        <Titulo>Destaques</Titulo>
         <Seletores>
           <Seletor
             onClick={() => setIntervalo('day')}

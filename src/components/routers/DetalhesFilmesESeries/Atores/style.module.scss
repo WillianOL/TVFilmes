@@ -34,7 +34,6 @@
 
   .elencoAtores {
     display: flex;
-    align-items: baseline;
     max-width: 1600px;
     gap: 20px;
     overflow-x: scroll;
@@ -53,7 +52,7 @@
       flex-direction: column;
       border-radius: var(--borderRadius);
       min-width: 180px;
-      min-height: 320px;
+      max-height: 320px;
       overflow: hidden;
       border: 1px solid var(--bordaElementos);
       cursor: pointer;
@@ -79,6 +78,20 @@
         }
         span {
           font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  @media(max-width: 1000px) {
+    .elencoAtores {
+      & > a {
+        min-width: 160px;
+        min-height: max-content;
+        div:nth-child(2) {
+          justify-content: space-between;
+          p {
+            font-size: .8rem;
+          }
         }
       }
     }

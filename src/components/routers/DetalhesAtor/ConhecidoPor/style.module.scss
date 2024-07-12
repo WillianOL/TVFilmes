@@ -1,6 +1,7 @@
 .conteiner {
   display: flex;
   flex-direction: column;
+  width: 100%;
   h2 {
     font-size: 1.3rem;
     font-weight: 500;
@@ -40,6 +41,11 @@
         font-size: .8rem;
         text-wrap: nowrap;
       }
+    }
+  }
+  @media(max-width: 1000px) {
+    ul {
+      width: 320px;
     }
   }
 }

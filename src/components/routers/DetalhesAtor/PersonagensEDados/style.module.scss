@@ -4,4 +4,7 @@
   width: 100%;
   max-width: 1600px;
   gap: 20px;
+  @media(max-width: 1000px) {
+    flex-direction: column;
+  }
 }

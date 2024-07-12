@@ -37,4 +37,11 @@
       }
     }
   }
+  @media(max-width: 1000px) {
+    .dados {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
 }

@@ -46,4 +46,9 @@
     right: 15px;
     top: 10px;
   }
+  @media(max-width: 1000px) {
+   .itemImagem {
+    width: 140px;
+   } 
+  }
 }

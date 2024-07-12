@@ -54,4 +54,19 @@
 
     }
   }
+  @media(max-width: 1000px) {
+    .lista {
+      .itemRecomendacao {
+        a {
+          div {
+            width: 250px;
+            height: 150px;
+          }
+          p {
+            font-size: .9rem;
+          }
+        }
+      }
+    }
+  }
 }

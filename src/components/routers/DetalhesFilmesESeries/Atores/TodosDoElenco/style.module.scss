@@ -36,14 +36,14 @@
         }
       }
       button {
-        font-size: .9rem;
+        font-size: 0.9rem;
         padding: 10px 25px;
         border-radius: var(--borderRadius2);
         border: 1px solid transparent;
         background-color: var(--corPrincipal);
         color: var(--branco);
         cursor: pointer;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
         &:hover {
           background-color: var(--elementosDeFundo);
           border: 1px solid var(--corPrincipal);
@@ -84,6 +84,31 @@
           span {
             font-size: 0.9rem;
             text-align: right;
+          }
+        }
+      }
+    }
+    @media (max-width: 1000px) {
+      .tituloEBotaoVoltar {
+        .tituloAtores {
+          font-size: 1.4rem;
+        }
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .conteinerAtores {
+        a {
+          div:nth-child(1) {
+            width: 120px;
+            height: 180px;
+          }
+          div:nth-child(2) {
+            p {
+              font-size: .9rem;
+            }
+            span {
+              font-size: .8rem;
+            }
           }
         }
       }

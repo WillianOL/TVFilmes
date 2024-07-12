@@ -42,6 +42,7 @@
     .temporadaPoster {
       min-width: 180px;
       height: 260px;
+      border-radius: var(--borderRadius);
       background-size: contain;
     }
     .temporadaInfo {
@@ -58,8 +59,6 @@
         font-weight: 400;
         color: var(--corTexto);
         gap: 8px;
-        p {
-        }
         span {
           display: flex;
           align-items: center;
@@ -76,6 +75,21 @@
               color: var(--branco);
             }
           }
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .temporadaConteiner {
+      flex-direction: column;
+      padding: 10px;
+      .temporadaInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          text-align: center;
+          font-size: .9rem;
         }
       }
     }

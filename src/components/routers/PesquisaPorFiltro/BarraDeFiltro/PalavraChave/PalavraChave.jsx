@@ -4,7 +4,7 @@ import useFetch from '../../../../../hooks/useFetch'
 import { GET_KEYWORD } from '../../../../../api/api'
 
 const PalavraChave = ({ palavra, setPalavra, setKeyword }) => {
-  const { dados, error, requisicao } = useFetch()
+  const { dados, requisicao } = useFetch()
 
   function handleWrite({ target }) {
     setPalavra(target.value)

@@ -6,6 +6,9 @@
     display: flex;
     font-weight: 500;
     gap: 10px;
+    li {
+      display: flex;
+    }
     a {
       padding: 10px 5px;
       position: relative;

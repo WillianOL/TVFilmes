@@ -6,7 +6,7 @@ import { UserContext } from '../../../../GlobalContext';
 
 const Banner = ({ dados, loading }) => {
   const avaliacao = Math.floor(dados.vote_average * 10);
-  const {adicionarFavoritos, favoritoErro} = React.useContext(UserContext)
+  const {adicionarFavoritos, favoritoAdicionado} = React.useContext(UserContext)
 
   return (
     <section
@@ -56,7 +56,6 @@ const Banner = ({ dados, loading }) => {
             <button onClick={() => adicionarFavoritos(dados)}>
               <FaHeart />
             </button>
-            {favoritoErro && <span>{favoritoErro}</span>}
           </div>
           <div className={style.bannerTexto}>
             <p>{dados.tagline && `"${dados.tagline}"`}</p>

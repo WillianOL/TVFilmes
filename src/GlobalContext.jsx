@@ -1,10 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export const UserContext = React.createContext();
 
 export const GlobalContext = ({ children }) => {
-  const [activeBarraPesquisa, setActiveBarraPesquisa] = React.useState(false);
   const [modalFavoritos, setModalFavoritos] = React.useState(false);
   const [errorPesquisa, setErrorPesquisa] = React.useState(null);
   const [resultadoPesquisa, setResultadoPesquisa] = React.useState(null);
@@ -12,7 +10,7 @@ export const GlobalContext = ({ children }) => {
   const [favoritos, setFavoritos] = React.useState(() => {
     return JSON.parse(localStorage.getItem('filmesFavoritos')) || [];
   });
-  const [favoritoErro ,setFavoritoErro] = React.useState(null)
+  const [favoritoAdicionado ,setFavoritoAdicionado] = React.useState(null)
 
   React.useEffect(() => {
     localStorage.setItem('filmesFavoritos', JSON.stringify(favoritos))
@@ -21,14 +19,10 @@ export const GlobalContext = ({ children }) => {
   function adicionarFavoritos(dados) {
     const itemAdicionado = favoritos.find(item => (dados.title || dados.name) === (item.name || item.title))
     if(itemAdicionado) {
-      setFavoritoErro('Item já adicionado aos favoritos!')
-      setTimeout(() => {
-        setFavoritoErro(null)
-      }, 3000)
+      deletarFavoritos(itemAdicionado)
       return
     }
     setFavoritos([...favoritos, dados])
-    setFavoritoErro(null)
   }
 
   function deletarFavoritos(dado) {
@@ -39,8 +33,6 @@ export const GlobalContext = ({ children }) => {
   return (
     <UserContext.Provider
       value={{
-        activeBarraPesquisa,
-        setActiveBarraPesquisa,
         setFavoritos,
         favoritos,
         modalFavoritos,
@@ -50,7 +42,8 @@ export const GlobalContext = ({ children }) => {
         resultadoPesquisa,
         setResultadoPesquisa,
         adicionarFavoritos,
-        favoritoErro,
+        setFavoritoAdicionado,
+        favoritoAdicionado,
         deletarFavoritos,
       }}
     >

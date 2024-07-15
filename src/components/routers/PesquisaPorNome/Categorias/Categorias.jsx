@@ -67,6 +67,7 @@ const Categorias = ({ dados }) => {
               style={{
                 backgroundColor: categoria === item.value ? '#e5e9f1' : '',
               }}
+              key={item.value}
             >
               <input
                 type="radio"

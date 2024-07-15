@@ -5,14 +5,6 @@ import { UserContext } from '../../../GlobalContext';
 import style from './style.module.scss';
 
 const Navegacao = () => {
-  const { activeBarraPesquisa, setActiveBarraPesquisa, modalFavoritos, setModalFavoritos } =
-    React.useContext(UserContext);
-
-  function handleClick() {
-    setActiveBarraPesquisa(!activeBarraPesquisa);
-    if (modalFavoritos) setModalFavoritos(!modalFavoritos);
-  }
-
   return (
     <nav className={style.navegacao}>
       <ul className={style.links}>
@@ -24,9 +16,6 @@ const Navegacao = () => {
         </li>
       </ul>
       <Favoritos />
-      <button onClick={handleClick}>
-        {activeBarraPesquisa ? 'Cancelar' : 'Pesquisar'}
-      </button>
     </nav>
   );
 };

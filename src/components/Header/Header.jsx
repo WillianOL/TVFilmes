@@ -3,8 +3,8 @@ import style from './Header.module.scss';
 import { PiFilmSlateFill } from 'react-icons/pi';
 import Navegacao from './Navegacao/Navegacao';
 import { NavLink } from 'react-router-dom';
-import BarraPesquisaHeader from '../BarraPesquisa/BarraPesquisaHeader/BarraPesquisaHeader';
 import MobileMenu from './MobileMenu/MobileMenu';
+import BarraPesquisa from '../BarraPesquisa/BarraPesquisa';
 
 const Header = () => {
   return (
@@ -14,8 +14,8 @@ const Header = () => {
           <p>TV<span>Filmes</span></p>
           <PiFilmSlateFill />
         </NavLink>
+        <BarraPesquisa />
         <Navegacao />
-        <BarraPesquisaHeader />
         <MobileMenu />
       </div>
     </header>

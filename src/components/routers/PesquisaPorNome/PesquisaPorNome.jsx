@@ -9,23 +9,26 @@ import { useParams } from 'react-router-dom';
 
 const ResultadoPesquisa = () => {
   const { requisicao, loading, dados, error } = useFetch();
-  const {name} = useParams()
+  const { name } = useParams();
 
   React.useEffect(() => {
     const { url, options } = GET_RESULTADO_PESQUISA(name);
     requisicao(url, options);
   }, [requisicao, name]);
 
-  if(error) return <p>Ocorreu um erro inesperado, volte ao inicio</p>
+  if (error) return <p>Ocorreu um erro inesperado, volte ao inicio</p>;
   return (
     <main className={style.conteiner}>
+      <h1>Resultados da Pesquisa: <span>{name}</span></h1>
       {loading && <Loading />}
-      {dados && (
-        <>
-          <Categorias dados={dados} />
-          <ResultadosPesquisa />
-        </>
-      )}
+      <div>
+        {dados && (
+          <>
+            <Categorias dados={dados} />
+            <ResultadosPesquisa />
+          </>
+        )}
+      </div>
     </main>
   );
 };

@@ -9,6 +9,15 @@
     img {
       width: 130px;
       border-radius: var(--borderRadius);
+      transition: all .1s ease;
+    }
+  }
+  &:hover {
+    .conteinerImg {
+      img {
+        scale: 1.1;
+        box-shadow: 0px 0px 5px var(--corPrincipal);
+      }
     }
   }
   .itemInfo {

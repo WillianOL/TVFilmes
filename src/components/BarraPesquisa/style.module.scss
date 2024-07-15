@@ -10,14 +10,15 @@
     border: 1px solid var(--bordaElementos);
     border-radius: var(--borderRadius) 0 0 var(--borderRadius);
     outline: none;
-    &:focus {
+    &:hover, &:focus {
       outline: 1px solid var(--corPrincipal);
+      box-shadow: 0px 0px 0px 3px var(--elementosDeFundo);
     }
     &::placeholder {
       color: rgb(129, 129, 129);
     }
   }
-  a {
+  button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,5 +49,31 @@
     font-size: .9rem;
     color: var(--avRuim);
     left: 0px;
+  }
+}
+
+.barraPesquisaMobile {
+  display: flex !important;
+  input {
+    width: 80vw !important;
+    border: 1px solid var(--bordaElementos);
+    height: 50px;
+    padding: 0px 20px;
+    outline: none;
+    &:hover, &:focus {
+      outline: 1px solid var(--corPrincipal);
+      box-shadow: 0px 0px 2px 3px var(--elementosDeFundo);
+    }
+  }
+  button {
+    height: 50px;
+    font-size: 1.3rem;
+    background-color: var(--corPrincipal);
+    border: 1px solid var(--corPrincipal);
+    padding: 5px 20px;
+    cursor: pointer;
+    path {
+      color: var(--branco);
+    }
   }
 }

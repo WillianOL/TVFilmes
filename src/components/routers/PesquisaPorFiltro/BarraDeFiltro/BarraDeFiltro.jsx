@@ -9,7 +9,7 @@ const BarraDeFiltro = ({ type, setResultadoFiltro }) => {
   const [genero, setGenero] = React.useState([]);
   const [ano, setAno] = React.useState('');
   const [palavra, setPalavra] = React.useState('');
-  const [keyword, setKeyword] = React.useState('')
+  const [keyword, setKeyword] = React.useState(null)
 
   return (
     <section className={style.barraDeFiltro}>

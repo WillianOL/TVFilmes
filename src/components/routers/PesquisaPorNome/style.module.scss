@@ -14,7 +14,7 @@
     position: relative;
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       width: 20px;
       height: 3px;
       border-radius: 3px;
@@ -29,9 +29,14 @@
     display: flex;
     gap: 30px;
   }
-  @media(max-width: 1000px) {
+  @media (max-width: 1000px) {
     padding: 0px 10px;
-    flex-direction: column;
-    align-items: center;
+    h1 {
+      font-size: 1.5rem;
+    }
+    & > div {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

@@ -10,7 +10,6 @@ export const GlobalContext = ({ children }) => {
   const [favoritos, setFavoritos] = React.useState(() => {
     return JSON.parse(localStorage.getItem('filmesFavoritos')) || [];
   });
-  const [favoritoAdicionado ,setFavoritoAdicionado] = React.useState(null)
 
   React.useEffect(() => {
     localStorage.setItem('filmesFavoritos', JSON.stringify(favoritos))
@@ -42,8 +41,6 @@ export const GlobalContext = ({ children }) => {
         resultadoPesquisa,
         setResultadoPesquisa,
         adicionarFavoritos,
-        setFavoritoAdicionado,
-        favoritoAdicionado,
         deletarFavoritos,
       }}
     >

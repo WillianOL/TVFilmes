@@ -112,9 +112,40 @@
         background-color: var(--corPrincipal);
         border: 0px;
         font-size: 1.2rem;
+        border: 1px solid var(--corPrincipal);
         cursor: pointer;
         path {
           color: var(--branco);
+        }
+        transition: all .2s ease;
+        &:hover {
+          background-color: var(--elementosDeFundo);
+          path {
+            color: var(--corPrincipal);
+          }
+        }
+      }
+      // Mensagem de hover do botao
+      [data-mensagem] {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: attr(data-mensagem);
+          left: 50px;
+          width: max-content;
+          font-size: 1rem;
+          background-color: var(--elementosDeFundo);
+          padding: 5px 20px;
+          color: var(--corPrincipal);
+          top: 5px;
+          border-radius: var(--borderRadius);
+          opacity: 0;
+          transition: all .2s ease;
+        }
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
         }
       }
       span {

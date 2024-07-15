@@ -1,12 +1,15 @@
 import React from 'react';
 import style from './style.module.scss';
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaCheck } from 'react-icons/fa';
 import Loading from '../../../helper/Loading/Loading';
 import { UserContext } from '../../../../GlobalContext';
 
 const Banner = ({ dados, loading }) => {
   const avaliacao = Math.floor(dados.vote_average * 10);
-  const {adicionarFavoritos, favoritoAdicionado} = React.useContext(UserContext)
+  const { adicionarFavoritos, favoritos } = React.useContext(UserContext);
+  const favoritoAdicionado = favoritos.find(
+    (item) => (dados.title || dados.name) === (item.name || item.title)
+  );
 
   return (
     <section
@@ -29,7 +32,9 @@ const Banner = ({ dados, loading }) => {
               {dados.title || dados.name}{' '}
               <span>
                 {'('}
-                {dados.release_date ? dados.release_date.slice(0, 4) : dados.first_air_date.slice(0, 4)}
+                {dados.release_date
+                  ? dados.release_date.slice(0, 4)
+                  : dados.first_air_date.slice(0, 4)}
                 {')'}
               </span>
             </h1>
@@ -53,9 +58,15 @@ const Banner = ({ dados, loading }) => {
             <p>Avaliação dos usuários</p>
           </div>
           <div className={style.bannerBotaoFavorito}>
-            <button onClick={() => adicionarFavoritos(dados)}>
-              <FaHeart />
-            </button>
+            {favoritoAdicionado ? (
+              <button onClick={() => adicionarFavoritos(dados)} data-mensagem="Remover dos favoritos">
+                <FaCheck />
+              </button>
+            ) : (
+              <button onClick={() => adicionarFavoritos(dados)} data-mensagem="Adicionar aos favoritos">
+                <FaHeart />
+              </button>
+            )}
           </div>
           <div className={style.bannerTexto}>
             <p>{dados.tagline && `"${dados.tagline}"`}</p>

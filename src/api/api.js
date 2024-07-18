@@ -1,5 +1,7 @@
-import { AUTHORIZATION } from './authorization';
 const API_URL = 'https://api.themoviedb.org/3/';
+const AUTHORIZATION = JSON.stringify(
+  import.meta.env.VITE_REACT_API_AUTHORIZATION
+);
 
 export function GET_POPULARES(plataforma) {
   return {
@@ -118,7 +120,12 @@ export function GET_KEYWORD(query) {
   };
 }
 
-export function GET_POR_FILTRO({type, generos = '', palavras = '', ano = ''}) {
+export function GET_POR_FILTRO({
+  type,
+  generos = '',
+  palavras = '',
+  ano = '',
+}) {
   return {
     url: `${API_URL}discover/${type}?include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=popularity.desc${
       generos && `&with_genres=${generos.join('%2C%20')}`

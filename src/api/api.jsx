@@ -1,7 +1,5 @@
 const API_URL = 'https://api.themoviedb.org/3/';
-const AUTHORIZATION = JSON.stringify(
-  import.meta.env.VITE_REACT_API_AUTHORIZATION
-);
+const AUTHORIZATION = import.meta.env.VITE_REACT_API_AUTHORIZATION
 
 export function GET_POPULARES(plataforma) {
   return {
@@ -10,7 +8,7 @@ export function GET_POPULARES(plataforma) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -23,7 +21,7 @@ export function GET_TRENDING(intervalo) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -36,7 +34,7 @@ export function GET_ATORES_POPULARES() {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -49,7 +47,7 @@ export function GET_GENERO(type) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -62,7 +60,7 @@ export function GET_RESULTADO_PESQUISA(valor) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -75,7 +73,7 @@ export function GET_DETALHES_FILME(id) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -88,7 +86,7 @@ export function GET_DETALHES_SERIE(id) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -101,7 +99,7 @@ export function GET_DETALHES_ATOR(id) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -114,7 +112,7 @@ export function GET_KEYWORD(query) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };
@@ -134,7 +132,7 @@ export function GET_POR_FILTRO({
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: AUTHORIZATION,
+        Authorization: `Bearer ${AUTHORIZATION}`,
       },
     },
   };

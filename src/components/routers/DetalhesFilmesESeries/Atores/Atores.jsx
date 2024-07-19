@@ -5,7 +5,6 @@ import style from './style.module.scss';
 import { Link } from 'react-router-dom';
 
 const Atores = ({ dados, loading }) => {
-  console.log(dados);
 
   if(dados.cast.length === 0) return
   return (

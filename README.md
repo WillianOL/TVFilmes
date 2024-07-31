@@ -34,9 +34,6 @@ Durante a construção do projeto, separei as rotas e criei custom hooks (como o
 
 &nbsp;
 
-## Explicação
-
-
 
 
 
